@@ -1,0 +1,23 @@
+PODS:
+  - JKLottieMananger (0.1.0):
+    - lottie-ios
+  - lottie-ios (3.1.1)
+
+DEPENDENCIES:
+  - JKLottieMananger (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - lottie-ios
+
+EXTERNAL SOURCES:
+  JKLottieMananger:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JKLottieMananger: 93846683314a07ac0a12bb29a5101476e94e1c3b
+  lottie-ios: 43a472d22b2dd2bed292cc4010c0b4d2e66d3ba8
+
+PODFILE CHECKSUM: b5b61d644ed01ef96f506004640e9b831ce461f4
+
+COCOAPODS: 1.7.3

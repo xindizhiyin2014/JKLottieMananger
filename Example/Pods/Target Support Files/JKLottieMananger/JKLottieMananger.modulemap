@@ -1,0 +1,6 @@
+framework module JKLottieMananger {
+  umbrella header "JKLottieMananger-umbrella.h"
+
+  export *
+  module * { export * }
+}
