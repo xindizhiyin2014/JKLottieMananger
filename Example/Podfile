@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'JKLottieMananger_Example' do
+  pod 'JKLottieMananger', :path => '../'
+
+  target 'JKLottieMananger_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
