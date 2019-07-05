@@ -15,13 +15,13 @@ import Lottie
         return animationView
     }
     
-    class func animationViewNamed(_ name:String, _ frame:CGRect) -> AnimationView{
+   public class func animationViewNamed(_ name:String, _ frame:CGRect) -> AnimationView{
         let animationView:AnimationView = AnimationView.init(name: name)
         animationView.frame = frame
         return animationView
     }
     
-    class func configLoopModel(_ loopModel:NSInteger, _ animationView:AnimationView ,_ count:CGFloat) -> Void {
+   public class func configLoopModel(_ loopModel:NSInteger, _ animationView:AnimationView ,_ count:CGFloat) -> Void {
         if loopModel == 0 {
             animationView.loopMode = .playOnce
         }else if loopModel == 1 {
@@ -36,7 +36,7 @@ import Lottie
         
     }
     
-    class func play(_ animationView:AnimationView,_ complete:((_ finished:Bool)->Void)?)->Void{
+   public class func play(_ animationView:AnimationView,_ complete:((_ finished:Bool)->Void)?)->Void{
         animationView.play { (_ finished:Bool) in
             if let complete = complete{
                 complete(finished)
@@ -45,7 +45,7 @@ import Lottie
         
     }
     
-    class func play(_ animationView:AnimationView, _ fromProgress:CGFloat, _ toProgress:CGFloat, _ complete:((_ finished:Bool)->Void)?) ->Void{
+   public class func play(_ animationView:AnimationView, _ fromProgress:CGFloat, _ toProgress:CGFloat, _ complete:((_ finished:Bool)->Void)?) ->Void{
         animationView.play(fromProgress: fromProgress, toProgress: toProgress, loopMode: animationView.loopMode) { (_ finished:Bool) in
             if let complete = complete{
                 complete(finished)
@@ -53,15 +53,19 @@ import Lottie
         }
     }
     
-    class func play(_ animationView:AnimationView) ->Void{
+   public class func play(_ animationView:AnimationView) ->Void{
         animationView.play()
     }
     
-    class func pause(_ animationView:AnimationView) ->Void{
+   public class func pause(_ animationView:AnimationView) ->Void{
         animationView.pause()
     }
     
-    class func stop(_ animationView:AnimationView) ->Void{
+   public class func stop(_ animationView:AnimationView) ->Void{
         animationView.stop()
+    }
+    
+   public class func changeRate(_ animationView:AnimationView, _ rate:CGFloat) ->Void{
+        animationView.animationSpeed = rate
     }
 }
