@@ -9,7 +9,7 @@ import Foundation
 import Lottie
 
 @objcMembers public class JKLottieManager: NSObject {
-    class func initAnimationView(_ filePath:String,_ frame:CGRect) -> AnimationView{
+   public class func initAnimationView(_ filePath:String,_ frame:CGRect) -> AnimationView{
         let animationView:AnimationView = AnimationView.init(filePath: filePath)
         animationView.frame = frame
         return animationView
